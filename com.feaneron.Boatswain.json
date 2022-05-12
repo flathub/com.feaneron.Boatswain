@@ -1,10 +1,10 @@
 {
-    "app-id" : "com.feaneron.Boatswain",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
-    "sdk" : "org.gnome.Sdk",
-    "command" : "boatswain",
-    "finish-args" : [
+    "app-id": "com.feaneron.Boatswain",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "42",
+    "sdk": "org.gnome.Sdk",
+    "command": "boatswain",
+    "finish-args": [
         "--device=all",
         "--socket=pulseaudio",
         "--share=network",
@@ -13,7 +13,7 @@
         "--socket=wayland",
         "--talk-name=org.mpris.MediaPlayer2.*"
     ],
-    "cleanup" : [
+    "cleanup": [
         "/include",
         "/lib/pkgconfig",
         "/man",
@@ -24,136 +24,137 @@
         "*.la",
         "*.a"
     ],
-    "modules" : [
+    "modules": [
         "shared-modules/libusb/libusb.json",
         {
-            "name" : "hidapi",
-            "buildsystem" : "autotools",
-            "sources" : [
+            "name": "hidapi",
+            "buildsystem": "autotools",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/libusb/hidapi.git",
-                    "tag" : "hidapi-0.11.2",
-                    "x-checker-data" : {
-                        "type" : "git",
-                        "tag-pattern" : "^hidapi-([\\d.]+)$"
-                    }
+                    "type": "git",
+                    "url": "https://github.com/libusb/hidapi.git",
+                    "tag": "hidapi-0.11.2",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^hidapi-([\\d.]+)$"
+                    },
+                    "commit": "31bde69a1f08c880ef1622f2586eea0daf3b0857"
                 }
             ]
         },
         {
-            "name" : "gusb",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "gusb",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Ddocs=false",
                 "-Dtests=false",
                 "-Dvapi=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.10.tar.xz",
-                    "sha256" : "0eb0b9ab0f8bba0c59631c809c37b616ef34eb3c8e000b0b9b71cf11e4931bdc"
+                    "type": "archive",
+                    "url": "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.10.tar.xz",
+                    "sha256": "0eb0b9ab0f8bba0c59631c809c37b616ef34eb3c8e000b0b9b71cf11e4931bdc"
                 }
             ]
         },
         {
-            "name" : "libpeas",
-            "buildsystem" : "meson",
-            "cleanup" : [
+            "name": "libpeas",
+            "buildsystem": "meson",
+            "cleanup": [
                 "/bin/*",
                 "/lib/peas-demo"
             ],
-            "config-opts" : [
+            "config-opts": [
                 "-Dcatalogue=false",
                 "-Ddemos=false",
                 "-Dgtk_doc=false",
                 "-Dwidgetry=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url" : "https://download.gnome.org/sources/libpeas/1.32/libpeas-1.32.0.tar.xz",
-                    "sha256" : "d625520fa02e8977029b246ae439bc218968965f1e82d612208b713f1dcc3d0e",
-                    "x-checker-data" : {
-                        "type" : "gnome",
-                        "name" : "libpeas"
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libpeas/1.32/libpeas-1.32.0.tar.xz",
+                    "sha256": "d625520fa02e8977029b246ae439bc218968965f1e82d612208b713f1dcc3d0e",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "libpeas"
                     }
                 }
             ]
         },
         {
-            "name" : "libportal",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libportal",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dbackends=gtk4",
                 "-Ddocs=false",
                 "-Dtests=false",
                 "-Dvapi=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://github.com/flatpak/libportal.git",
-                    "tag" : "0.6"
+                    "type": "git",
+                    "url": "https://github.com/flatpak/libportal.git",
+                    "tag": "0.6"
                 }
             ]
         },
         {
-            "name" : "libadwaita",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "libadwaita",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dexamples=false",
                 "-Dtests=false",
                 "-Dvapi=false"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "commit" : "0d46e91e70148d070d44f01a9410803baec0944b"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
+                    "commit": "0d46e91e70148d070d44f01a9410803baec0944b"
                 }
             ],
-            "modules" : [
+            "modules": [
                 {
-                    "name" : "libsass",
-                    "buildsystem" : "meson",
-                    "config-opts" : [
+                    "name": "libsass",
+                    "buildsystem": "meson",
+                    "config-opts": [
                         "--libdir=/app/lib"
                     ],
-                    "sources" : [
+                    "sources": [
                         {
-                            "type" : "git",
-                            "url" : "https://github.com/lazka/libsass.git",
-                            "commit" : "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
+                            "type": "git",
+                            "url": "https://github.com/lazka/libsass.git",
+                            "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
                         }
                     ]
                 },
                 {
-                    "name" : "sassc",
-                    "buildsystem" : "meson",
-                    "config-opts" : [
+                    "name": "sassc",
+                    "buildsystem": "meson",
+                    "config-opts": [
                         "--libdir=/app/lib"
                     ],
-                    "sources" : [
+                    "sources": [
                         {
-                            "type" : "git",
-                            "url" : "https://github.com/lazka/sassc.git",
-                            "commit" : "82803377c33247265d779af034eceb5949e78354"
+                            "type": "git",
+                            "url": "https://github.com/lazka/sassc.git",
+                            "commit": "82803377c33247265d779af034eceb5949e78354"
                         }
                     ]
                 }
             ]
         },
         {
-            "name" : "boatswain",
-            "buildsystem" : "meson",
-            "sources" : [
+            "name": "boatswain",
+            "buildsystem": "meson",
+            "sources": [
                 {
-                    "type" : "git",
-                    "url" : "https://gitlab.gnome.org/World/boatswain.git",
-                    "tag" : "0.1.0",
-                    "commit" : "63c182374305ca97d06f6a85fb2ac3d44242af9c"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/World/boatswain.git",
+                    "tag": "0.1.0",
+                    "commit": "63c182374305ca97d06f6a85fb2ac3d44242af9c"
                 }
             ]
         }
