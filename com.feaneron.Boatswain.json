@@ -1,7 +1,7 @@
 {
     "app-id": "com.feaneron.Boatswain",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "43",
     "sdk": "org.gnome.Sdk",
     "command": "boatswain",
     "finish-args": [
@@ -66,7 +66,7 @@
                 "/lib/peas-demo"
             ],
             "config-opts": [
-                "-Dcatalogue=false",
+                "-Dglade_catalog=false",
                 "-Ddemos=false",
                 "-Dgtk_doc=false",
                 "-Dwidgetry=false"
@@ -97,52 +97,6 @@
                     "type": "git",
                     "url": "https://github.com/flatpak/libportal.git",
                     "tag": "0.6"
-                }
-            ]
-        },
-        {
-            "name": "libadwaita",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dexamples=false",
-                "-Dtests=false",
-                "-Dvapi=false"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/GNOME/libadwaita.git",
-                    "commit": "0d46e91e70148d070d44f01a9410803baec0944b"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "libsass",
-                    "buildsystem": "meson",
-                    "config-opts": [
-                        "--libdir=/app/lib"
-                    ],
-                    "sources": [
-                        {
-                            "type": "git",
-                            "url": "https://github.com/lazka/libsass.git",
-                            "commit": "302397c0c8ae2d7ab02f45ea461c2c3d768f248e"
-                        }
-                    ]
-                },
-                {
-                    "name": "sassc",
-                    "buildsystem": "meson",
-                    "config-opts": [
-                        "--libdir=/app/lib"
-                    ],
-                    "sources": [
-                        {
-                            "type": "git",
-                            "url": "https://github.com/lazka/sassc.git",
-                            "commit": "82803377c33247265d779af034eceb5949e78354"
-                        }
-                    ]
                 }
             ]
         },
