@@ -107,8 +107,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/boatswain.git",
-                    "tag": "0.2.0",
-                    "commit": "f5dc01c1471db5f2cc80110a46bcfcf3202d1f72"
+                    "tag": "0.2.1",
+                    "commit": "e9529fe6e190a87789dabaaf83f4c9be6c6615eb"
                 }
             ]
         }
