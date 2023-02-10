@@ -112,8 +112,12 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/boatswain.git",
-                    "tag": "0.2.2",
-                    "commit": "3435a5b6feec3e8d6747b0c8066efff85c40eb75"
+                    "tag": "0.3.0",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    },
+                    "commit": "e176cfd490790b3a0e1bd27a2602b3f4241b6a3b"
                 }
             ]
         }
