@@ -52,9 +52,14 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://people.freedesktop.org/~hughsient/releases/libgusb-0.3.10.tar.xz",
-                    "sha256": "0eb0b9ab0f8bba0c59631c809c37b616ef34eb3c8e000b0b9b71cf11e4931bdc"
+                    "type": "git",
+                    "url": "https://github.com/hughsie/libgusb.git",
+                    "tag": "0.4.5",
+                    "x-checker-data": {
+                        "type": "git",
+                        "tag-pattern": "^([\\d.]+)$"
+                    },
+                    "commit": "cfe6865211bc241fe5e10b999bc0e27e7bddcb84"
                 }
             ]
         },
