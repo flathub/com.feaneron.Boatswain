@@ -33,12 +33,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libusb/hidapi.git",
-                    "tag": "hidapi-0.13.1",
+                    "tag": "hidapi-0.14.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^hidapi-([\\d.]+)$"
                     },
-                    "commit": "4ebce6b5059b086d05ca7e091ce04a5fd08ac3ac"
+                    "commit": "d3013f0af3f4029d82872c1a9487ea461a56dee4"
                 }
             ]
         },
@@ -54,12 +54,32 @@
                 {
                     "type": "git",
                     "url": "https://github.com/hughsie/libgusb.git",
-                    "tag": "0.4.5",
+                    "tag": "0.4.8",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
                     },
-                    "commit": "cfe6865211bc241fe5e10b999bc0e27e7bddcb84"
+                    "commit": "ea074426660eb78199106767d826db9ea0fc8734"
+                }
+            ]
+        },
+        {
+            "name" : "gjs",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dinstalled_tests=false",
+                "-Dskip_dbus_tests=true",
+                "-Dskip_gtk_tests=true"
+            ],
+            "sources" : [
+                {
+                    "type" : "archive",
+                    "url": "https://download.gnome.org/sources/gjs/1.78/gjs-1.78.0.tar.xz",
+                    "sha256": "fbaa20e0917668830800f92951688f9fc08f01296affd5cdb4b35f750be27dc9",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gjs"
+                    }
                 }
             ]
         },
@@ -71,16 +91,14 @@
                 "/lib/peas-demo"
             ],
             "config-opts": [
-                "-Dglade_catalog=false",
-                "-Ddemos=false",
                 "-Dgtk_doc=false",
-                "-Dwidgetry=false"
+                "-Dlua51=false"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/1.34/libpeas-1.34.0.tar.xz",
-                    "sha256": "4305f715dab4b5ad3e8007daec316625e7065a94e63e25ef55eb1efb964a7bf0",
+                    "url": "https://download.gnome.org/sources/libpeas/2.0/libpeas-2.0.0.tar.xz",
+                    "sha256": "5407acbc0c12f790f70c9d2b98224acc1be3ac449c60603b8192ca020b497011",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libpeas"
@@ -92,7 +110,9 @@
             "name": "libportal",
             "buildsystem": "meson",
             "config-opts": [
-                "-Dbackends=gtk4",
+                "-Dbackend-gtk3=disabled",
+                "-Dbackend-gtk4=enabled",
+                "-Dbackend-qt5=disabled",
                 "-Ddocs=false",
                 "-Dtests=false",
                 "-Dvapi=false"
@@ -101,7 +121,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/flatpak/libportal.git",
-                    "tag": "0.6"
+                    "tag": "0.7.1"
                 }
             ]
         },
@@ -112,12 +132,12 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/boatswain.git",
-                    "tag": "0.3.0",
+                    "tag": "0.4.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
                     },
-                    "commit": "e176cfd490790b3a0e1bd27a2602b3f4241b6a3b"
+                    "commit": "c7049d3d4f054bd360ea61728a643a1d7020a601"
                 }
             ]
         }
