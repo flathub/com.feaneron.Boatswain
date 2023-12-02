@@ -64,18 +64,18 @@
             ]
         },
         {
-            "name" : "gjs",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "gjs",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dinstalled_tests=false",
                 "-Dskip_dbus_tests=true",
                 "-Dskip_gtk_tests=true"
             ],
-            "sources" : [
+            "sources": [
                 {
-                    "type" : "archive",
-                    "url": "https://download.gnome.org/sources/gjs/1.78/gjs-1.78.0.tar.xz",
-                    "sha256": "fbaa20e0917668830800f92951688f9fc08f01296affd5cdb4b35f750be27dc9",
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gjs/1.78/gjs-1.78.1.tar.xz",
+                    "sha256": "7e90511c429127c39eac0068c4ac9a353df7e6fbbc646f5f18e8962882c18641",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gjs"
