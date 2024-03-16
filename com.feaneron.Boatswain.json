@@ -74,8 +74,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gjs/1.78/gjs-1.78.4.tar.xz",
-                    "sha256": "9aec7ab872c2050404907ae94f0ae7abec8a54bd9c894ddb5c2d0f51e932b9a1",
+                    "url": "https://download.gnome.org/sources/gjs/1.80/gjs-1.80.0.tar.xz",
+                    "sha256": "0f78cd3f0e8eb446517d665e4fde1d66302b0c283bbe87b78e9cbfd4d86ed576",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gjs"
@@ -97,8 +97,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/2.0/libpeas-2.0.1.tar.xz",
-                    "sha256": "9ddc1d51f38663da4df52163051b7b2cea3a242cfaee9f5a7e140f0784c8aa77",
+                    "url": "https://download.gnome.org/sources/libpeas/2.0/libpeas-2.0.2.tar.xz",
+                    "sha256": "f30dffed63ca2f40477b40e171c0a31f80d91425ba1e1e47320ee6425480ecc3",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libpeas"
