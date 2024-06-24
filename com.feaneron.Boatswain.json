@@ -126,6 +126,26 @@
             ]
         },
         {
+            "name": "gdk-pixbuf",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dgtk_doc=false",
+                "-Dman=false",
+                "-Dothers=enabled"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/GNOME/gdk-pixbuf.git",
+                    "tag": "2.42.12",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "gdk-pixbuf"
+                    }
+                }
+            ]
+        },
+        {
             "name": "boatswain",
             "buildsystem": "meson",
             "sources": [
