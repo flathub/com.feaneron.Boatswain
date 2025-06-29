@@ -33,12 +33,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libusb/hidapi.git",
-                    "tag": "hidapi-0.14.0",
+                    "tag": "hidapi-0.15.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^hidapi-([\\d.]+)$"
                     },
-                    "commit": "d3013f0af3f4029d82872c1a9487ea461a56dee4"
+                    "commit": "d6b2a974608dec3b76fb1e36c189f22b9cf3650c"
                 }
             ]
         },
@@ -74,8 +74,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gjs/1.84/gjs-1.84.1.tar.xz",
-                    "sha256": "44796b91318dbbe221a13909f00fd872ef92f38c68603e0e3574e46bc6bac32c",
+                    "url": "https://download.gnome.org/sources/gjs/1.84/gjs-1.84.2.tar.xz",
+                    "sha256": "35142edf345705636300291ec3a7d583f14969ff3fae0ff30f4a95b1e6740166",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gjs"
@@ -126,25 +126,25 @@
             ]
         },
         {
-            "name" : "gdk-pixbuf",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "gdk-pixbuf",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dgtk_doc=false",
                 "-Dman=false",
                 "-Dothers=enabled"
             ],
-            "cleanup" : [
+            "cleanup": [
                 "/bin/*"
             ],
-            "post-install" : [
+            "post-install": [
                 "rm /app/lib/libgdk_pixbuf-2.0.so*",
                 "rm /app/lib/pkgconfig/gdk-pixbuf-2.0.pc"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz",
-                    "sha256": "b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7",
+                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.43/gdk-pixbuf-2.43.3.tar.xz",
+                    "sha256": "ed4c5d16346a5b4e95326731de9700fad70d03bbd2f9324732e6c94f42d869d7",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gdk-pixbuf"
