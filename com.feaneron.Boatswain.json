@@ -33,12 +33,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libusb/hidapi.git",
-                    "tag": "hidapi-0.14.0",
+                    "tag": "hidapi-0.15.0",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^hidapi-([\\d.]+)$"
                     },
-                    "commit": "d3013f0af3f4029d82872c1a9487ea461a56dee4"
+                    "commit": "d6b2a974608dec3b76fb1e36c189f22b9cf3650c"
                 }
             ]
         },
@@ -74,8 +74,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gjs/1.84/gjs-1.84.1.tar.xz",
-                    "sha256": "44796b91318dbbe221a13909f00fd872ef92f38c68603e0e3574e46bc6bac32c",
+                    "url": "https://download.gnome.org/sources/gjs/1.87/gjs-1.87.1.tar.xz",
+                    "sha256": "95f7a73acc5b2dbe643a6851ba5b4001230a75e1e859afc9a81fbf4861b899cf",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gjs"
@@ -97,8 +97,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/2.0/libpeas-2.0.7.tar.xz",
-                    "sha256": "1e9a9d69761d2109eff5b7c11d8c96b4867ccfaca2b921eded49401192769ec9",
+                    "url": "https://download.gnome.org/sources/libpeas/2.2/libpeas-2.2.0.tar.xz",
+                    "sha256": "c2887233f084a69fabfc7fa0140d410491863d7050afb28677f9a553b2580ad9",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libpeas"
@@ -126,25 +126,25 @@
             ]
         },
         {
-            "name" : "gdk-pixbuf",
-            "buildsystem" : "meson",
-            "config-opts" : [
+            "name": "gdk-pixbuf",
+            "buildsystem": "meson",
+            "config-opts": [
                 "-Dgtk_doc=false",
                 "-Dman=false",
                 "-Dothers=enabled"
             ],
-            "cleanup" : [
+            "cleanup": [
                 "/bin/*"
             ],
-            "post-install" : [
+            "post-install": [
                 "rm /app/lib/libgdk_pixbuf-2.0.so*",
                 "rm /app/lib/pkgconfig/gdk-pixbuf-2.0.pc"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz",
-                    "sha256": "b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7",
+                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.44/gdk-pixbuf-2.44.5.tar.xz",
+                    "sha256": "69b93e09139b80c0ee661503d60deb5a5874a31772b5184b9cd5462a4100ab68",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "gdk-pixbuf"
