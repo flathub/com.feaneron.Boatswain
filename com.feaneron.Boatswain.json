@@ -63,26 +63,6 @@
             ]
         },
         {
-            "name": "gjs",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dinstalled_tests=false",
-                "-Dskip_dbus_tests=true",
-                "-Dskip_gtk_tests=true"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gjs/1.87/gjs-1.87.1.tar.xz",
-                    "sha256": "95f7a73acc5b2dbe643a6851ba5b4001230a75e1e859afc9a81fbf4861b899cf",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gjs"
-                    }
-                }
-            ]
-        },
-        {
             "name": "libpeas",
             "buildsystem": "meson",
             "cleanup": [
