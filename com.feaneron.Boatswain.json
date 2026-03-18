@@ -1,7 +1,7 @@
 {
     "app-id": "com.feaneron.Boatswain",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "48",
+    "runtime-version": "50",
     "sdk": "org.gnome.Sdk",
     "command": "boatswain",
     "finish-args": [
@@ -25,7 +25,6 @@
         "*.a"
     ],
     "modules": [
-        "shared-modules/libusb/libusb.json",
         {
             "name": "hidapi",
             "buildsystem": "autotools",
@@ -33,12 +32,12 @@
                 {
                     "type": "git",
                     "url": "https://github.com/libusb/hidapi.git",
-                    "tag": "hidapi-0.14.0",
+                    "tag": "hidapi-0.15.0",
+                    "commit": "d6b2a974608dec3b76fb1e36c189f22b9cf3650c",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^hidapi-([\\d.]+)$"
-                    },
-                    "commit": "d3013f0af3f4029d82872c1a9487ea461a56dee4"
+                    }
                 }
             ]
         },
@@ -55,30 +54,10 @@
                     "type": "git",
                     "url": "https://github.com/hughsie/libgusb.git",
                     "tag": "0.4.9",
+                    "commit": "ed31c8134d80d006bd45450e84180be2a7c0742e",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
-                    },
-                    "commit": "ed31c8134d80d006bd45450e84180be2a7c0742e"
-                }
-            ]
-        },
-        {
-            "name": "gjs",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dinstalled_tests=false",
-                "-Dskip_dbus_tests=true",
-                "-Dskip_gtk_tests=true"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gjs/1.84/gjs-1.84.1.tar.xz",
-                    "sha256": "44796b91318dbbe221a13909f00fd872ef92f38c68603e0e3574e46bc6bac32c",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gjs"
                     }
                 }
             ]
@@ -97,8 +76,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.gnome.org/sources/libpeas/2.0/libpeas-2.0.7.tar.xz",
-                    "sha256": "1e9a9d69761d2109eff5b7c11d8c96b4867ccfaca2b921eded49401192769ec9",
+                    "url": "https://download.gnome.org/sources/libpeas/2.2/libpeas-2.2.1.tar.xz",
+                    "sha256": "589eca89b437006edf3755478df037c740a2a84cfa5d202dbad6095e828e2488",
                     "x-checker-data": {
                         "type": "gnome",
                         "name": "libpeas"
@@ -121,34 +100,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/flatpak/libportal.git",
-                    "tag": "0.9.1"
-                }
-            ]
-        },
-        {
-            "name" : "gdk-pixbuf",
-            "buildsystem" : "meson",
-            "config-opts" : [
-                "-Dgtk_doc=false",
-                "-Dman=false",
-                "-Dothers=enabled"
-            ],
-            "cleanup" : [
-                "/bin/*"
-            ],
-            "post-install" : [
-                "rm /app/lib/libgdk_pixbuf-2.0.so*",
-                "rm /app/lib/pkgconfig/gdk-pixbuf-2.0.pc"
-            ],
-            "sources" : [
-                {
-                    "type": "archive",
-                    "url": "https://download.gnome.org/sources/gdk-pixbuf/2.42/gdk-pixbuf-2.42.12.tar.xz",
-                    "sha256": "b9505b3445b9a7e48ced34760c3bcb73e966df3ac94c95a148cb669ab748e3c7",
-                    "x-checker-data": {
-                        "type": "gnome",
-                        "name": "gdk-pixbuf"
-                    }
+                    "tag": "0.9.1",
+                    "commit": "8f5dc8d192f6e31dafe69e35219e3b707bde71ce"
                 }
             ]
         },
@@ -160,11 +113,11 @@
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/boatswain.git",
                     "tag": "5.0",
+                    "commit": "d05c7332e27fc0a549c6e7c2d1b5448716363165",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
-                    },
-                    "commit": "d05c7332e27fc0a549c6e7c2d1b5448716363165"
+                    }
                 }
             ]
         }
