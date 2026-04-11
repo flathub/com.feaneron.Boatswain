@@ -42,27 +42,6 @@
             ]
         },
         {
-            "name": "gusb",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Ddocs=false",
-                "-Dtests=false",
-                "-Dvapi=false"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/hughsie/libgusb.git",
-                    "tag": "0.4.9",
-                    "commit": "ed31c8134d80d006bd45450e84180be2a7c0742e",
-                    "x-checker-data": {
-                        "type": "git",
-                        "tag-pattern": "^([\\d.]+)$"
-                    }
-                }
-            ]
-        },
-        {
             "name": "libpeas",
             "buildsystem": "meson",
             "cleanup": [
@@ -112,8 +91,8 @@
                 {
                     "type": "git",
                     "url": "https://gitlab.gnome.org/World/boatswain.git",
-                    "tag": "5.0",
-                    "commit": "d05c7332e27fc0a549c6e7c2d1b5448716363165",
+                    "tag": "6.0",
+                    "commit": "7569a5d6f951003f6468fbc0f0442575f05de06d",
                     "x-checker-data": {
                         "type": "git",
                         "tag-pattern": "^([\\d.]+)$"
